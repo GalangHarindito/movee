@@ -9,6 +9,7 @@ import {
   TitleHide,
   DescriptionYear,
   WrapperCategory,
+  WrapperCast
 } from "./style";
 import { MovieProps } from "@helpers/typeData";
 import {
@@ -17,8 +18,9 @@ import {
   WrapperYear,
   WrapperLanguage,
 } from "@style/global/global";
-import { defineYear, defineLanguage } from "@helpers/helper";
+import { defineYear, defineLanguage, truncateText } from "@helpers/helper";
 import Category from "components/category/category";
+import Button from "components/button/button";
 
 type CategoryType = {
   id: number;
@@ -31,6 +33,7 @@ type Props = {
 };
 
 const MovieCard = async ({ movies, category }: Props) => {
+  console.log(movies)
   return (
     <Card>
       <WrapperContent>
@@ -52,10 +55,10 @@ const MovieCard = async ({ movies, category }: Props) => {
               </Typocustome>
             </WrapperYear>
             <WrapperLanguage>
-                <Typocustome color="white" size="0.7rem">
-                  {defineLanguage(movies.original_language)}
-                </Typocustome>
-              </WrapperLanguage>
+              <Typocustome color="white" size="0.7rem">
+                {defineLanguage(movies.original_language)}
+              </Typocustome>
+            </WrapperLanguage>
           </Title>
           <WrapperTitleHide>
             <TitleHide>
@@ -78,8 +81,13 @@ const MovieCard = async ({ movies, category }: Props) => {
             <WrapperCategory>
               <Category movieCategory={movies.genre_ids} category={category} />
             </WrapperCategory>
-
-            <H6 color="white"></H6>
+            <WrapperCast>
+              <Typocustome size="0.9rem" color='white'>Overview</Typocustome>
+              <Typocustome color="white" size="0.75rem">"{truncateText(movies.overview)}"</Typocustome>
+              <br />
+              <Button label={'See Details'} type={'button'} />
+            </WrapperCast>
+           
           </WrapperTitleHide>
         </WrapperDescription>
       </WrapperContent>

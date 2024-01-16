@@ -44,8 +44,9 @@ export const WrapperTitleHide = styled.div`
   opacity: 1;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto 1fr 1fr;
+  grid-template-rows: auto auto 1fr 200px;
   grid-row-gap: 1.5rem;
+  text-overflow: ellipsis;
 }
 `;
 
@@ -66,6 +67,9 @@ export const WrapperCategory = styled.div`
   gap: 0.7rem;
   flex-wrap: wrap;
 `;
+
+export const WrapperCast = styled.div`
+`
 
 export const WrapperContent = styled.div`
   &:hover ${WrapperDescription} {

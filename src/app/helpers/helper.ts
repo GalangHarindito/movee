@@ -16,3 +16,14 @@ export const defineLanguage = (val: string) => {
   }
   return language;
 };
+
+export const truncateText = (text: string) => {
+  const maxLength = 150;
+
+  let res: string = text;
+  if (text.length > maxLength) {
+    res = text.substring(0, maxLength - 3) + "...";
+  }
+  
+  return res;
+};

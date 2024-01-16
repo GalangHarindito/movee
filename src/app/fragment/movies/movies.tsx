@@ -7,7 +7,7 @@ const Movies = async () => {
   const fetchData = await fetchMovies();
   const movies = await fetchData.results;
   const fetchDataCategory = await fetchCategory();
-  console.log(movies)
+
   return (
     <Wrapper>
       {movies &&

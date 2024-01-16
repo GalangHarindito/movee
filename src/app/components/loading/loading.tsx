@@ -1,6 +1,7 @@
 'use client'
 
 import { H1 } from "@style/global/global"
+import styled from "styled-components";
 
 
 const Loading = () => {
@@ -12,3 +13,8 @@ const Loading = () => {
 }
 
 export default Loading;
+
+
+// const wrapper = styled.div`
+
+// `

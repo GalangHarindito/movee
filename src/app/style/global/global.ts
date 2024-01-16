@@ -33,7 +33,7 @@ export const Typocustome = styled.p<{ size?: string; color?: string }>`
 
 export const MainLayout = styled.section`
   background-color: #141526;
-  height: 100hv;
+  height: 100%;
 `;
 
 export const WrapperYear= styled.div`
