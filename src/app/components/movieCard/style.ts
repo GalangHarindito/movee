@@ -29,7 +29,7 @@ export const WrapperDescription = styled.div`
   background-color: #302d2d;
   height: 100%;
   width: calc(25rem / 1.5);
-  opacity: 0.7;
+  opacity: 0.9;
 `;
 
 export const Rating = styled.div``;

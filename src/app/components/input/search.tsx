@@ -22,6 +22,7 @@ const Search = styled.input`
   border-color: transparent;
   border-radius: 10px;
   font-size: 0.9rem;
+  align-self: center;
 
   &:focus {
     outline: none;
