@@ -1,13 +1,16 @@
+'use client'
+
 import styled from "styled-components";
 
 type Props = {
   placeHolder: string;
-};
+  onChange: () => {};
+}; 
 
-const SearchInput = ({ placeHolder }: Props) => {
+const SearchInput = ({ placeHolder, onChange }: Props) => {
   return (
     <Wrapper>
-      <Search type="search" placeholder={placeHolder} />
+      <Search type="search" id="input-search" placeholder={placeHolder} onChange={onChange} />
     </Wrapper>
   );
 };

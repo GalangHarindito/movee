@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Test Component renders button layout unchanged  1`] = `
+<div>
+  <div
+    class="sc-gsTDqH dtnoZ"
+  >
+    <button
+      class="sc-bdfCDU jdFpGB primary"
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;

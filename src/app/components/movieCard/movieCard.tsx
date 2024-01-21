@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 import {
   Card,
@@ -13,7 +15,6 @@ import {
 } from "./style";
 import { MovieProps } from "@helpers/typeData";
 import {
-  H6,
   Typocustome,
   WrapperYear,
   WrapperLanguage,
@@ -21,6 +22,7 @@ import {
 import { defineYear, defineLanguage, truncateText } from "@helpers/helper";
 import Category from "components/category/category";
 import Button from "components/button/button";
+
 
 type CategoryType = {
   id: number;
@@ -33,7 +35,7 @@ type Props = {
 };
 
 const MovieCard = async ({ movies, category }: Props) => {
-  console.log(movies)
+
   return (
     <Card>
       <WrapperContent>
@@ -85,7 +87,7 @@ const MovieCard = async ({ movies, category }: Props) => {
               <Typocustome size="0.9rem" color='white'>Overview</Typocustome>
               <Typocustome color="white" size="0.75rem">"{truncateText(movies.overview)}"</Typocustome>
               <br />
-              <Button label={'See Details'} type={'button'} />
+              <Button label={'See Details'} type={'button'} onClick={() => console.log('test')} />
             </WrapperCast>
            
           </WrapperTitleHide>

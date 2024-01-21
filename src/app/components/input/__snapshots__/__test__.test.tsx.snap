@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Input Test Component renders search input layout unchanged 1`] = `
+<div>
+  <div
+    class="sc-bdfCDU"
+  >
+    <input
+      class="sc-gsTDqH ksnCEC"
+      id="input-search"
+      placeholder="placeholder"
+      type="search"
+    />
+  </div>
+</div>
+`;
